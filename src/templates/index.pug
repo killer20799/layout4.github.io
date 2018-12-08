@@ -11,68 +11,113 @@ block body
 	//- Bạn viết code vào đây nhớ là phải mở đầu bằng section ở mỗi khối
 	section.home-slider
 		.owl-carousel.owl-theme
-			.item
-				img(src="./img/home_slider_1.jpg", alt="")
-				.title
-					.container
-						.row
-							.col-md-7
-								h2 Chúng tôi là FullStack Vietnam
-								p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti incidunt ex, autem dignissimos illum aperiam pariatur in explicabo corporis delectus totam! 
-			.item
-				img(src="./img/home_slider_1.jpg", alt="")
-				.title
-					.container
-						.row
-							.col-md-7
-								h2 Chúng tôi là FullStack Vietnam
-								p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti incidunt ex, autem dignissimos illum aperiam pariatur in explicabo corporis delectus totam! 
-			.item
-				img(src="./img/home_slider_1.jpg", alt="")
-				.title
-					.container
-						.row
-							.col-md-7
-								h2 Chúng tôi là FullStack Vietnam
-								p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti incidunt ex, autem dignissimos illum aperiam pariatur in explicabo corporis delectus totam! 
+			- for(x=1;x<3;x++)
+				.item
+					img(src="./img/home_slider_"+x+".png", alt="")
+					.title
+						.container
+							.row
+								.col-md-8.offset-md-2.text-md-center.mb-3
+									h2 Chúng tôi là FullStack Vietnam
+									p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti incidunt ex, autem dignissimos illum aperiam pariatur in explicabo corporis delectus totam!
+
 	section.home-news
 		.container
 			.row
-				.col-md-4.item
-					figure
-						.blockimg
-							img(src="./img/home_news_1.jpg", alt="", srcset="")
-						figcaption
-							h3 
-								a(href="#") Chúng tôi là FullStack Vietnam
-							time 22/06/2018
-							p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti incidunt ex, autem dignissimos illum aperiam pariatur in explicabo corporis delectus totam! 
-				.col-md-4.item
-					figure
-						.blockimg
-							img(src="./img/home_news_2.jpg", alt="", srcset="")
-						figcaption
-							h3 
-								a(href="#") Chúng tôi là FullStack Vietnam
-							time 22/06/2018
-							p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti incidunt ex, autem dignissimos illum aperiam pariatur in explicabo corporis delectus totam! 
-				.col-md-4.item
-					figure
-						.blockimg
-							img(src="./img/home_news_3.jpg", alt="", srcset="")
-						figcaption
-							h3 
-								a(href="#") Chúng tôi là FullStack Vietnam
-							time 22/06/2018
-							p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti incidunt ex, autem dignissimos illum aperiam pariatur in explicabo corporis delectus totam! 
-	section.home-clients.mt-5
+				.col
+					h2.text TIN TỨC
+			.row
+				-for(x=1;x<4;x++)
+					.col-md-4.text-cnt
+						figure
+							.boximg
+								img.img-fluid(src="./img/home_clients_"+x+".png", alt="")
+							figcaption
+								h3 We are FULLSTACK VIETNAM
+								date 06/12/2018
+								p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio ipsum quaerat temporibus corporis sed expedita explicabo fugit ut excepturi ea.
+
+	section.home-ads
+		.container
+			.row
+				.col
+					h2.text ĐỊNH HƯỚNG CHỦ NGHĨA XÃ HỘI
+			.row
+				.col-md-3.icon-ads
+					i.far.fa-copy
+					h3 TẦM NHÌN
+					p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit aut soluta totam inventore debitis quod dolor, ullam sit veniam itaque.
+				.col-md-3.icon-ads
+					i.far.fa-moon
+					h3 TẦM NHÌN
+					p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit aut soluta totam inventore debitis quod dolor, ullam sit veniam itaque.
+				.col-md-3.icon-ads
+					i.fas.fa-chalkboard
+					h3 TẦM NHÌN
+					p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit aut soluta totam inventore debitis quod dolor, ullam sit veniam itaque.
+				.col-md-3.icon-ads
+					i.far.fa-save
+					h3 TẦM NHÌN
+					p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit aut soluta totam inventore debitis quod dolor, ullam sit veniam itaque.
+
+	section.home-banner
+		.container
+			.row
+				.col-md-8.offset-md-2.text-center
+					h2 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur repudiandae voluptatem sunt optio maxime consectetur qui sit impedit nam quas quam possimus pariatur soluta, nulla illum dicta suscipit amet officiis!
+					p
+						a.btn.btn-primary(href="") Xem thêm
+
+	section.home-clients
+		.container
+			.row
+				.col
+					h2.text ĐCS MUÔN NĂM
+			.row
+				.col
+					ul
+						li
+							a(href="") TẤT CẢ
+						li
+							a(href="") GROUP	
+						li
+							a(href="") TIN THỊ TRƯỜNG
+						li
+							a(href="") TIN VỊT
+			.row
+				-for(x=1;x<4;x++)
+					.col-md-4
+						.boximg
+							img(src="./img/home_clients_3.png", alt="")
+
+	section.home-feedback
+		.comtainer
+			.row
+				.col
+					h2.text KHÁCH HÀNG NÓI
+		.owl-carousel.owl-theme
+			-for(x=0;x<3;x++)
+				.item
+					.boximg.text-center
+						img.img-fluid(src="./img/home_img_1.png", alt="")
+					.title.text-center
+						.container
+							.row
+								.col-md-8.offset-md-2.text-md-center
+									p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, fugit reiciendis assumenda labore laudantium, cupiditate recusandae odio quia hic consectetur enim voluptatum corporis fuga accusantium pariatur distinctio eligendi at. Nostrum!
+									.text-cnt
+										h5 Tokuda
+										h6 CEO XYZ Company
+
+	section.home-client.mt-5.pb-5
 		.container
 			.row
 				.col
 					.owl-carousel.owl-theme
-						- for(x=1;x<10;x++)
-							.item
-								if (x < 7)
-									img(src="./img/clients_"+x+".png", alt="")
-								else
-									img(src="./img/clients_"+(x-3)+".png", alt="")
+							-for(x=1;x<13;x++)
+								.item
+									if ( x < 7 )
+										img(src="./img/home_imgs_"+x+".png", alt="")
+									else
+										img(src="./img/home_imgs_"+(x-6)+".png", alt="")
+

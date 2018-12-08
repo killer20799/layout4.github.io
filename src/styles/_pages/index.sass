@@ -1,67 +1,297 @@
-/////////////////////////////////
-// Phần Slider
-/////////////////////////////////
 .home-slider
 	.owl-carousel
-		// Phần Slider
 		.item
 			position: relative
 			.title
-				+pad(2rem 0)
-				height: 100%
-				width: 100%
+				+pad(2rem 0 0 0)
 				display: flex
+				width: 100%
 				align-items: center
-			+media-breakpoint-up(md)
-				.title
-					+pos(abs, 0 null null 0)
-					color: $whites
+				+media-breakpoint-up(md)
+					+pos(abs,null null 0)
+					color: #ffffff
 					+text-shadow()
-					h2
-						+fz(3rem)
-					p 
-						+fz(1.5rem)
-						+lh(2rem)
-		// Phần Control
-		.owl-dots
-			margin-bottom: 2rem
-/////////////////////////////////
-// Phần News
-/////////////////////////////////
-
-.home-news
-	.item 
-		figure
-			.blockimg
-				+bor-rad(10px)
-				overflow: hidden
-				img
-					width: 100%
-			figcaption 
-				margin-top: 1rem
-				h3 
-					+fz(1.1rem)
-					margin-bottom: 0
-				time 
-					+fz(.85rem)
-					color: darken($whites,30%)
-				p 
-					margin-top: .5rem
-					color: darken($whites,50%)
-/////////////////////////////////
-// Phần News
-/////////////////////////////////
-
-.home-clients
-	.owl-carousel
-		.item 
-			+pad(.5rem)
-		// Phần Control
+					background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.7))
 		.owl-nav
-			margin-bottom: 2rem
-			button 
+			button
+				background: $main
 				i 
 					display: block
 					width: 2rem
 					height: 2rem
 					+lh(2rem)
+					color: #ffffff
+					background: #000000
+					&:hover 
+						background: #00c4c9
+				&:focus, &:active
+					outline: none
+			+media-breakpoint-up(md)
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				width: 100%
+				margin: 0
+				.owl-prev
+					position: absolute
+					left: 2rem
+					top: 50%
+					transform: translateY(-50%)
+				.owl-next
+					position: absolute
+					right: 2rem
+					top: 50%
+					transform: translateY(-50%)
+
+.home-news
+	padding: 3rem
+	.text-cnt
+		figure
+			padding-top: 1rem
+			.boximg
+				overflow: hidden
+				position: relative
+				&:before
+					position: absolute
+					top: 0
+					left: 0
+					content: ''
+					width: 100%
+					height: 100%
+					box-shadow: 0 0 0 3px lighten($sen,15%) inset
+					z-index: 100
+					opacity: 0
+					transition: .5s all ease-in-out
+				img
+					filter: grayscale(100%)
+					transition: .5s all ease-in-out
+			figcaption
+				h3
+					+fz(1.2rem)
+					+pad(1rem null null null)
+					margin-bottom: 0
+					color: #000
+					transition: .5s all ease-in-out
+				date
+					+fz(.9rem)
+					color: grey
+					transition: .5s all ease-in-out
+				p
+					padding-top: .5rem
+					color: grey
+					transition: .5s all ease-in-out
+		&:hover
+			figure
+				.boximg
+					&:before
+						opacity: 1
+					img
+						filter: grayscale(0)
+						transform: scale(1.2)
+				figcaption
+					h3
+						color: lighten($sen,15%)
+					p
+						color: #000000
+
+.home-ads
+	padding: 4rem
+	background: url('../img/home_ads_1.png') center center no-repeat
+	background-attachment: fixed
+	background-size: cover
+	.icon-ads
+		i
+			+fz(4.25rem)
+			+pad(5rem 0 1rem 0)
+			transition: .5s
+		p
+			color: grey
+			+fz(13px)
+		h3
+			color: #000000
+			padding: 1rem 0
+			+fz(17px)
+			+fw(bold)
+			transition: .5s
+		&:hover
+			i
+				color: lighten($sen, 15%)
+			h3
+				color: lighten($sen, 15%)
+
+.home-banner
+	display: flex
+	justify-content: center
+	align-items: center
+	min-height: 300px
+	width: 100%
+	background: url('../img/home_ads_2.png') center center no-repeat
+	background-attachment: fixed
+	background-size: cover
+	h2
+		color: #ffffff
+		+fz(20px)
+	p
+		margin-top: 2rem
+		a
+			text-transform: uppercase
+			+fw(bold)
+			+pad(.75rem 4rem)
+			+bor-rad(25px)
+			background: lighten($sen, 15%)
+			&:hover
+				background: #00c4c9
+
+.home-clients
+	padding: 2rem 0
+	ul
+		list-style-type: none
+		display: flex
+		justify-content: center
+		align-items: center
+		+pad(1.25rem 0 1rem 0)
+		a
+			+pad(.5rem)
+			text-decoration: none
+			text-transform: uppercase
+			color: #000000
+			+fw(bold)
+			+mar(0 .25rem)
+			&:hover
+				background: lighten($sen,15%)
+				+bor-rad(2rem)
+				color: #ffffff
+	.boximg
+		margin-bottom: 1rem
+		overflow: hidden
+		position: relative
+		&:before
+			position: absolute
+			top: 0
+			left: 0
+			content: ''
+			width: 100%
+			height: 100%
+			box-shadow: 0 0 0 3px lighten($sen,15%) inset
+			z-index: 100
+			opacity: 0
+			transition: .5s all ease-in-out
+		img
+			filter: grayscale(100%)
+			transition: .5s all ease-in-out
+		&:hover
+			&:before
+				opacity: 1
+			img
+				filter: grayscale(0)
+				transform: scale(1.2)
+	+media-breakpoint-up(md)
+		ul
+			list-style-type: none
+			display: flex
+			justify-content: center
+			align-items: center
+			+pad(1.25rem 0 1rem 0)
+			a
+				+pad(.5rem .75rem)
+				text-decoration: none
+				text-transform: uppercase
+				color: #000000
+				+fw(bold)
+				+mar(0 .25rem)
+				&:hover
+					background: lighten($sen,15%)
+					+bor-rad(2rem)
+					color: #ffffff
+		.boximg
+			overflow: hidden
+			position: relative
+			&:before
+				position: absolute
+				top: 0
+				left: 0
+				content: ''
+				width: 100%
+				height: 100%
+				box-shadow: 0 0 0 3px lighten($sen,15%) inset
+				z-index: 100
+				opacity: 0
+				transition: .5s all ease-in-out
+			img
+				filter: grayscale(100%)
+				transition: .5s all ease-in-out
+			&:hover
+				&:before
+					opacity: 1
+				img
+					filter: grayscale(0)
+					transform: scale(1.2)
+
+.home-feedback
+	padding: 5rem 0
+	background: url('../img/home_feedback_1.png') center center no-repeat
+	background-attachment: fixed
+	background-size: cover
+	.owl-carousel
+		.item
+			img
+				margin-top: 1rem
+				max-width: 150px
+				border: 3px solid lighten($sen, 15%)
+				+bor-rad(50%)
+				display: inline
+			.title
+				p
+					margin-top: 1rem
+					font-style: italic
+					color: #000000
+				.text-cnt
+					h5
+						margin-top: 1rem
+						color: lighten($sen, 15%)
+						+fw(bold)
+		.owl-dots
+			button
+				outline: none
+				span
+					background: lighten(grey, 30%)
+				&.active
+					span
+						background: lighten($sen, 15%)
+
+.home-client
+	.owl-carousel
+		.owl-nav
+			position: relative
+			button
+				outline: none
+				i 
+					display: flex
+					justify-content: center
+					align-items: center
+					width: 1.5rem
+					height: 1.5rem
+					+lh(1.5rem)
+					color: #ffffff
+					background: #083e64
+					&:hover 
+						background: $main
+					&::before
+						+fz(9px)
+			+media-breakpoint-up(md)
+				position: absolute
+				top: 50%
+				left: 0
+				transform: translateY(-50%)
+				width: 100%
+				margin: 0
+				.owl-prev
+					position: absolute
+					left: -3rem
+					top: 50%
+					transform: translateY(-50%)
+				.owl-next
+					position: absolute
+					right: -3rem
+					top: 50%
+					transform: translateY(-50%)

@@ -1,3 +1,62 @@
-footer
-	img 
-		max-width: 200px
+.footer
+		padding: 3rem
+		background: #00c4c9
+		h6 
+			padding-bottom: .5rem
+			line-height: 1rem
+			+fw(bold)
+			+fz(17px)
+		ul
+			a
+				color: lighten(#00c4c9, 45%)
+		.form-group
+			display: flex
+			
+			.form-control
+				+bor-rad(0)
+				border: 2px solid #083e64
+				background: #083e64
+				+fz(15px)
+			button
+				+bor-rad(0)
+				background: #09f9ff
+				border: 2px solid #083e64
+				border-left: none
+				color: #083e64
+				padding: 0 1.5rem
+				+fz(13px)
+				+fw(bold)
+				&:hover
+					background: darken(#09f9ff, 20%)
+
+.hihi
+	background: #083e64
+	padding: 2rem
+	.text
+		display: flex
+		justify-content: center
+		align-items: center
+		color: #ffffff
+		a
+			text-decoration: none
+			color: #ffffff
+	ul
+		display: flex
+		justify-content: flex-end
+		align-items: center
+		list-style-type: none
+		margin: 0
+	
+		a
+			display: flex
+			justify-content: center
+			align-items: center
+			color: #083e64
+			background: #839eb1
+			height: 2.5rem
+			width: 2.5rem
+			+bor-rad(50%)
+			margin-right: .5rem
+			text-decoration: none
+			&:hover
+				background: #ffffff

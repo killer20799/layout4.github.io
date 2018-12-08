@@ -4,3 +4,32 @@ html, body
 	font-size: 14px
 	height: 100%
 	width: 100%
+	h2.text
+		+fw(bold)
+		text-transform: uppercase
+		text-align: center
+		padding: 1rem
+		+fz(31px)
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 50%
+			width: 5rem
+			height: 3px
+			background: lighten($sen,15%)
+			transform: translateX(-50%)
+		&:after
+			margin-bottom: 1px
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 50%
+			width: 1.15rem
+			height: 1.15rem
+			+bor-rad(50%)
+			background: #ffffff
+			color: lighten($sen,15%)
+			transform: translate(-50%, 50%)
+			box-shadow: 0 0 0 3px lighten($sen,15%) inset
