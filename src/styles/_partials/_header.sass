@@ -6,8 +6,11 @@ header
 		img 
 			max-height: 2rem
 	ul
+		li
+			&:hover
+				background: #08d1d6
 		a
-			padding: .5rem .75rem
+			
 			font-size: 17px
 			font-weight: bold
 			color: #000000
@@ -15,11 +18,17 @@ header
 				background: #08d1d6
 				text-decoration: none
 				color: #ffffff
-				border-top-left-radius: 25px
-				border-bottom-right-radius: 25px
-				transition: .5s
-
 	+media-breakpoint-up(md)
 		.navbar-brand
 			img 
 				max-height: 3rem
+		ul
+			li
+				&:hover
+					background: none
+			a
+				padding: .5rem .75rem
+				&:hover
+					border-top-left-radius: 25px
+					border-bottom-right-radius: 25px
+					transition: .5s

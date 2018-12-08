@@ -6358,21 +6358,27 @@ header {
     padding-left: 0; }
   header .navbar-brand img {
     max-height: 2rem; }
+  header ul li:hover {
+    background: #08d1d6; }
   header ul a {
-    padding: .5rem .75rem;
     font-size: 17px;
     font-weight: bold;
     color: #000000; }
     header ul a:hover {
       background: #08d1d6;
       text-decoration: none;
-      color: #ffffff;
-      border-top-left-radius: 25px;
-      border-bottom-right-radius: 25px;
-      transition: .5s; }
+      color: #ffffff; }
   @media (min-width: 768px) {
     header .navbar-brand img {
-      max-height: 3rem; } }
+      max-height: 3rem; }
+    header ul li:hover {
+      background: none; }
+    header ul a {
+      padding: .5rem .75rem; }
+      header ul a:hover {
+        border-top-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+        transition: .5s; } }
 
 .footer {
   padding: 3rem;
@@ -6544,7 +6550,7 @@ header {
 
 .home-ads {
   padding: 4rem;
-  background: url("../img/home_ads_1.png") center center no-repeat;
+  background: url("./../img/home_ads_1.png") center center no-repeat;
   background-attachment: fixed;
   background-size: cover; }
   .home-ads .icon-ads i {
@@ -6577,7 +6583,7 @@ header {
   align-items: center;
   min-height: 300px;
   width: 100%;
-  background: url("../img/home_ads_2.png") center center no-repeat;
+  background: url("./../img/home_ads_2.png") center center no-repeat;
   background-attachment: fixed;
   background-size: cover; }
   .home-banner h2 {
