@@ -52,13 +52,21 @@ $(document).ready(function () {
 
     // Phần Client
     $('.home-client .owl-carousel').owlCarousel({
-        items: 6,
+        items: 1,
         nav: true,
         dots: false,
         loop: true,
         autoplay: true,
         autoplaySpeed: 250,
-        navText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>']
+        navText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>'],
+        responsive: {
+            480: {
+                items: 3
+            },
+            768: {
+                items: 6
+            }
+        }
     });
 });
 //# sourceMappingURL=main.js.map

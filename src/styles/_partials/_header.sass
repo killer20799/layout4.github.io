@@ -1,9 +1,24 @@
 header
+	background: #ffffff
 	.navbar
 		+pad(null 0)
 	.navbar-brand
 		img 
 			max-height: 2rem
+	ul
+		a
+			padding: .5rem .75rem
+			font-size: 17px
+			font-weight: bold
+			color: #000000
+			&:hover
+				background: #08d1d6
+				text-decoration: none
+				color: #ffffff
+				border-top-left-radius: 25px
+				border-bottom-right-radius: 25px
+				transition: .5s
+
 	+media-breakpoint-up(md)
 		.navbar-brand
 			img 
